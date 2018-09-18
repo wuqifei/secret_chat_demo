@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protomodel;
+
+message SendSingleTextMsgC2S {
+    uint64 uid = 1;
+    string message = 2;
+}
+message SendSingleTextMsgS2C {
+    bool flag = 1;
+}
+
+message SendSinglePublishTextMsgS2C {
+    uint64 uid = 1;
+    string message = 2;
+}
+
+message SendSinglePublishTextMsgC2S {
+}

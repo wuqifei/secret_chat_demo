@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package protomodel;
+
+message PingS2C {
+    int64 time_stamp = 1;
+}
+
+message PingC2S {
+    int64 time_stamp = 1;
+}

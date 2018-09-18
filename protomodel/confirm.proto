@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protomodel;
+
+message ConfirmS2C {
+    string random_key = 1;
+    int64 client_id = 2;
+}
+
+message ConfirmC2S {
+    int64 time_stamp = 1;
+}
