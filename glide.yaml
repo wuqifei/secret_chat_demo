@@ -1,0 +1,26 @@
+package: github.com/wuqifei/chat
+import:
+- package: github.com/gizak/termui
+  version: ^2.3.0
+- package: github.com/gogo/protobuf
+  version: ^1.1.1
+  subpackages:
+  - proto
+- package: github.com/golang/protobuf
+  version: ^1.2.0
+  subpackages:
+  - proto
+- package: github.com/wuqifei/server_lib
+  subpackages:
+  - concurrent
+  - libencrypt/aes_ecb_encrypt
+  - libencrypt/base64_encrypt
+  - libencrypt/rsa_encrypt
+  - libfile
+  - libio
+  - libnet2
+  - librand
+  - libtime
+  - logs2
+  - logs_plugin
+  - signal
