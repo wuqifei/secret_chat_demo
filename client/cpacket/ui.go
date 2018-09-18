@@ -66,7 +66,15 @@ func UIInit() {
 				Rows[4] = "typing:"
 				SendMsg(str)
 			} else {
-				msg.Enque(e.ID)
+				if e.ID == "<Space>" {
+					e.ID = " "
+				}
+				if e.ID == "C-8>" {
+					msg.Dequeue()
+				} else {
+					msg.Enque(e.ID)
+				}
+
 				Rows[4] = fmt.Sprintf("typing:%s", strings.Join(msg, ""))
 			}
 

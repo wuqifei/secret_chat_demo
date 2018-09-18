@@ -16,6 +16,13 @@ func (q *queue_val) Enque(val string) {
 	*q = append(*q, val)
 
 }
+func (q *queue_val) Dequeue() {
+	length := len(*q)
+	if length == 0 {
+		return
+	}
+	*q = append([]string{}, (*q)[:length-1]...)
+}
 
 func (q *queue_val) Flush() string {
 	str := strings.Join(*q, "")
